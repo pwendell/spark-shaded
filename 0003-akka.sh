@@ -32,7 +32,7 @@ function main() {
     sed -i -e "s/\(.*\)version\(.*\)${VER}\(.*\)/\1version\2${VER}${SFX}\3/g" project/*.scala
 
     export SBT_OPTS=-XX:MaxPermSize=256M
-    projects=( "actor" "remote" "zeromq" "slf4j" )
+    projects=( "actor" "remote" "zeromq" "slf4j" "testkit" )
     versions=( "2.11" "2.10" )
     artifacts=( ".pom" ".jar" "-sources.jar" "-javadoc.jar" )
     for project in "${projects[@]}"
